@@ -1,0 +1,53 @@
+server:
+  port: 8888
+  servlet:
+    session:
+      timeout: 10
+  tomcat:
+    uri-encoding: utf-8
+#Database
+spring:
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/blog?serverTimezone=GMT
+    password: Gy120499@
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  #cloud config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/1085122184/config
+          search-paths: /**
+          username: 1085122184
+          password: gy1204995993
+      label: master
+#  redis:
+#    host: 127.0.0.1
+#    port: 6379
+#    database: 4
+#    timeout: 0
+#    jedis:
+#      pool:
+#        max-active: 3000
+#        max-wait: -1
+#        max-idle: 20
+#        min-idle: 0
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+#    virtual-host: /
+#    queue: test
+
+#mapper.XML
+mybatis:
+  mapper-locations: classpath:mapperXml/*.xml
+
+#eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: ${ERUEKA_URL:http://localhost:8762/eureka/}
