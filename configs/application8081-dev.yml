@@ -18,7 +18,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   #redis
   redis:
-    host: 127.0.0.1
+    host: 59.110.113.232
     port: 6379
     database: 4
     timeout: 0
@@ -29,10 +29,10 @@ spring:
         max-idle: 20
         min-idle: 0
 #  rabbitmq:
-#    host: 127.0.0.1
+#    host: 59.110.113.232
 #    port: 5672
-#    username: guest
-#    password: guest
+#    username: cuishine
+#    password: gy1204995993
 #    virtual-host: /
 #    queue: test
 
